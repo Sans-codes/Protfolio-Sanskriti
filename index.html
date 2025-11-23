@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sanskriti Aryal — Portfolio</title>
+  <meta name="description" content="Portfolio of Sanskriti Aryal, student & developer" />
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="favicon.ico">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1 class="logo">Sanskriti Aryal</h1>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="about" class="hero container">
+      <img src="images/profile.jpg" alt="Profile photo of Sanskriti Aryal" class="profile-photo">
+      <div class="hero-text">
+        <h2>Hello, I'm Sanskriti</h2>
+        <p>Computer Science student I build beginner-friendly web projects and interactive 3D applications.</p>
+      </div>
+    </section>
+
+    <section id="projects" class="container projects">
+      <h2>Projects</h2>
+      <div class="project-list">
+        <article class="project-card">
+          <img src="images/project1.png" alt="Screenshot of project one">
+          <h3>Project One : Simple Portfolio</h3>
+          <p>HTML, CSS, responsive layout. A starting portfolio page.</p>
+        </article>
+
+        <article class="project-card">
+          <img src="images/project2.png" alt="Screenshot of project two">
+          <h3>Project Two : Noughts & Crosses</h3>
+          <p>game with file saving and leaderboard, made using python</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" class="container contact">
+      <h2>Contact</h2>
+      <form action="#" method="post" novalidate>
+        <label for="name">Name</label>
+        <input id="name" name="name" type="text" required>
+
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" required>
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <button type="submit" class="btn">Send message</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Sanskriti Aryal — Built with HTML & CSS</p>
+    </div>
+  </footer>
+
+  <script>
+    // footer year
+    document.getElementById('year').textContent = new Date().getFullYear();
+    // simple form handler (prevents real submit so GitHub Pages won't error)
+    document.querySelector('form').addEventListener('submit', function(e){
+      e.preventDefault();
+      alert('Thanks! This form is a demo. You can connect it using Formspree or Netlify forms.');
+    });
+  </script>
+</body>
+</html>
